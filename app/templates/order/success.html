@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{%block content %}
+<div class="container mt-5">
+<div class="row justify-content-center">
+    <div class="col-md-8">
+    <div class="card text-center">
+        <div class="card-header bg-success text-white">
+        Order Confirmation
+        </div>
+        <div class="card-body">
+        <h5 class="card-title">Thank you for your order!</h5>
+        <p class="card-text">Your order has been successfully placed. We are processing your order and will send you a confirmation email shortly.</p>
+        <p class="card-text">Order Number: <strong>{{order.id}}</strong></p>
+        <p class="card-text">Total: <strong>${{order.total}}</strong></p>
+        <a href="/" class="btn btn-primary mt-3">Continue Shopping</a>
+        </div>
+        <div class="card-footer text-muted">
+        If you have any questions, please <a href="">contact us</a>.
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

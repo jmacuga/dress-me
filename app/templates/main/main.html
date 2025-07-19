@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="{{ url_for('main.home', color=color_filter, min_price=min_price, max_price=max_price) }}"
+                class="list-group-item list-group-item-action {% if not category_name and not subcategory_id %}active{% endif %}">All
+                Categories</a>
+            {% for category in categories|groupby('category_name') %}
+            <div>
+                <a href="{{ url_for('main.home', category_name=category.grouper, color=color_filter, min_price=min_price, max_price=max_price) }}"
+                    class="list-group-item list-group-item-action {% if category_name == category.grouper %}active{% endif %}">
+                    {{ category.grouper }}
+                </a>
+                {% for subcategory in category.list %}
+                <a href="{{ url_for('main.home', category_name=category.grouper, subcategory_id=subcategory.id, color=color_filter, min_price=min_price, max_price=max_price) }}"
+                    class="list-group-item list-group-item-action ms-3 {% if subcategory_id == subcategory.id %}active{% endif %}">
+                    {{ subcategory.subcategory_name }}
+                </a>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Color Filter -->
+        <div class="list-group mt-4">
+            <h5 class="list-group-item">Filter by Color</h5>
+            <a href="{{ url_for('main.home', category_name=category_name, subcategory_id=subcategory_id, min_price=min_price, max_price=max_price) }}"
+                class="list-group-item list-group-item-action {% if not color_filter %}active{% endif %}">All Colors</a>
+            {% for color in colors %}
+            <a href="{{ url_for('main.home', category_name=category_name, subcategory_id=subcategory_id, color=color, min_price=min_price, max_price=max_price) }}"
+                class="list-group-item list-group-item-action {% if color_filter == color %}active{% endif %}">
+                {{ color }}
+            </a>
+            {% endfor %}
+        </div>
+
+        <!-- Price Filter -->
+        <div class="list-group mt-4">
+            <h5 class="list-group-item">Filter by Price</h5>
+            <a href="{{ url_for('main.home', category_name=category_name, subcategory_id=subcategory_id, color=color_filter) }}"
+                class="list-group-item list-group-item-action {% if not min_price and not max_price %}active{% endif %}">All
+                Prices</a>
+            <a href="{{ url_for('main.home', category_name=category_name, subcategory_id=subcategory_id, color=color_filter, min_price=0, max_price=150) }}"
+                class="list-group-item list-group-item-action {% if min_price == 0 and max_price == 150 %}active{% endif %}">Below
+                $150</a>
+            <a href="{{ url_for('main.home', category_name=category_name, subcategory_id=subcategory_id, color=color_filter, min_price=150, max_price=200) }}"
+                class="list-group-item list-group-item-action {% if min_price == 150 and max_price == 200 %}active{% endif %}">$150
+                - $200</a>
+            <a href="{{ url_for('main.home', category_name=category_name, subcategory_id=subcategory_id, color=color_filter, min_price=200, max_price=250) }}"
+                class="list-group-item list-group-item-action {% if min_price == 200 and max_price == 250 %}active{% endif %}">$200
+                - $250</a>
+            <a href="{{ url_for('main.home', category_name=category_name, subcategory_id=subcategory_id, color=color_filter, min_price=250) }}"
+                class="list-group-item list-group-item-action {% if min_price == 250 %}active{% endif %}">Above $250</a>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="col-md-9">
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Products</h2>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ product.img_url }}" class="card-img-top" alt="{{ product.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">${{ product.price }}</p>
+                            <a href="{{ url_for('products.product_type', product_id=product.id) }}"
+                                class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    {% if pagination.page > 1 %}
+                    <li class="page-item">
+                        <a class="page-link"
+                            href="{{ url_for('main.home', page=pagination.page - 1, category_name=category_name, subcategory_id=subcategory_id, color=color_filter, min_price=min_price, max_price=max_price) }}"
+                            aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    {% if pagination.page < pagination.pages %} <li class="page-item">
+                        <a class="page-link"
+                            href="{{ url_for('main.home', page=pagination.page + 1, category_name=category_name, subcategory_id=subcategory_id, color=color_filter, min_price=min_price, max_price=max_price) }}"
+                            aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                        </li>
+                        {% endif %}
+                </ul>
+            </nav>
+        </section>
+    </div>
+</div>
+{% endblock %}

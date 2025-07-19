@@ -1,0 +1,16 @@
+id,subcategory_name,category_name,size_type_id
+1,Belts,Accessories,2
+2,Handbags,Accessories,3
+3,Socks,Accessories,1
+4,Watches,Accessories,3
+5,Jeans,Apparel,2
+6,Skirts,Apparel,2
+7,Sweatshirts,Apparel,2
+8,Tops,Apparel,2
+9,Trousers,Apparel,2
+10,Tshirts,Apparel,2
+11,Casual Shoes,Footwear,1
+12,Flip Flops,Footwear,1
+13,Heels,Footwear,1
+14,Sandals,Footwear,1
+15,Sports Shoes,Footwear,1

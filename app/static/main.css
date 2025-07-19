@@ -1,0 +1,44 @@
+.short {
+    .sidebar {
+        width:5%;
+        text-align:center;
+        .logo, .searchInput, .text, .avatar, .name {
+            display:none;
+        }
+        .sidebartop {
+            display:block;
+            height:75px;
+            .logo-mobile {
+                display:none;
+            }
+            .menu {
+                width:100%;
+                text-align:center;
+            }
+        }
+        .text.hover {
+            display: block !important;
+            background-color:rgba(255,255,255,.9);
+            color:$primary-color;
+            padding:.5rem;
+            box-shadow: 1px 1px 5px 0 rgba(0,0,0,.25);
+            position: absolute;
+            left:3rem;
+            top:1rem;
+            border-radius:.25rem;
+        }
+        .account {
+            display:block;
+            .logout {
+                width:100%;
+                text-align:center;
+            }
+        }
+        .search {
+            margin:1.75rem -.2rem;
+        }
+    }
+    .main {
+        margin-left:calc(5% + 2rem)
+    }
+}

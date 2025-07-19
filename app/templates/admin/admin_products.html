@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}" />
+
+
+<div class="admin-statistics">
+    <div class="dropdown">
+        <button class="dropbtn">Year</button>
+        <div class="dropdown-content">
+            {% for y in years %}
+            <a href="../{{ y }}">{{ y }}</a>
+
+            {% endfor %}
+        </div>
+    </div>
+    <div class="admin-statistics-info">
+        <h2>{{ year }}</h2>
+    </div>
+
+    <section>
+        <h2>Product statistics</h2>
+        <span>10 most frequently purchased products in a given month.</span>
+        <div id="products-slider" class="slider">
+            <div class="slides">
+                <button class="prev compare-button" onclick="prevSlide('products-slider')">&#10094;</button>
+                {% for month in months %}
+                <div class="month-statistics">
+                    <div class="month-name">{{month}}</div>
+                    {% if is_info_products[month] %}
+                    <img src="{{ url_for('static', filename='figures/products/products_monthly_reports_hist_' ~ month ~ '.png') }}"/>
+                    {% else %}
+                    <div class="no-info">No information</div>
+                    {% endif %}
+
+                </div>
+                {% endfor %}
+                <button class="next compare-button" onclick="nextSlide('products-slider')">&#10095;</button>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='slider.js') }}"></script>  
+
+    </section>
+    <section>
+        <h2>Category statistics</h2>
+        <span>Distribution of purchases by category in a given month.</span>
+        <div id="categories-slider" class="slider">
+            <div class="slides">
+                <button class="prev compare-button" onclick="prevSlide('categories-slider')">&#10094;</button>
+                {% for month in months %}
+                <div class="month-statistics">
+                    <div class="month-name">{{month}}</div>
+                    {% if is_info_categories[month] %}
+                    <img src="{{ url_for('static', filename='figures/products/categories_monthly_reports_pie_' ~ month ~ '.png') }}"/>
+                    {% else %}
+                    <div class="no-info">No information</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <button class="next compare-button" onclick="nextSlide('categories-slider')">&#10095;</button>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='slider.js') }}"></script>  
+
+    </section>
+
+</div>
+
+{% endblock %}

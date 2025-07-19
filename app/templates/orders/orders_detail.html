@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mt-5 mb-4">Orders Detail</h2>
+    {% if order_details %}
+    {% for detail in order_details %}
+    <div class="order-item mb-4 p-3 border rounded">
+        <div class="row mb-2">
+            <div class="col-md-2"><strong>Date:</strong> {{ detail.order.datetime.strftime("%Y-%m-%d %H:%M:%S") }}</div>
+            <div class="col-md-2"><strong>Total:</strong> ${{ detail.order.total }}</div>
+            <div class="col-md-2"><strong>Status:</strong> {{ detail.order_status.name }}</div>
+            <!-- Adjust this to display status name if available -->
+            <div class="col-md-6"><strong>Delivery Method:</strong> {{ detail.delivery_method.name }}</div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6"><strong>Address:</strong> {{ detail.address.street }}, {{ detail.address.city }}, {{
+                detail.address.country }}, {{ detail.address.zip_code }}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-2"><strong>Product Name</strong></div>
+            <div class="col-md-2"><strong>Price</strong></div>
+            <div class="col-md-2"><strong>Quantity</strong></div>
+            <div class="col-md-2"><strong>Total</strong></div>
+        </div>
+        <hr>
+        {% for item in detail.cart_items %}
+        <div class="row mb-2">
+            <div class="col-md-2">{{ item.product_item.product_type.name }}</div>
+            <div class="col-md-2">${{ item.product_item.product_type.price }}</div>
+            <div class="col-md-2">{{ item.quantity }}</div>
+            <div class="col-md-2">${{ item.quantity * item.product_item.product_type.price }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="text-right mt-4">
+        <p>You have no orders.</p>
+        <a href="{{ url_for('main.home') }}" class="btn btn-primary">Go shopping</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

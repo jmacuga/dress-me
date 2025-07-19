@@ -1,0 +1,57 @@
+product_id,name,price,image,subcategory_id,color
+1561,Quechua Women Sweat Proof White T-shirt,205.89,http://assets.myntassets.com/v1/images/style/properties/6b6acd9a9543e1f1c9c40af34dc1060d_images.jpg,10,White
+1597,Geonaute Women Black Outdoor Bag,113.45,http://assets.myntassets.com/v1/images/style/properties/f86dc81cba54c2106a6b2bf9ee52bfdc_images.jpg,2,Black
+1598,Geonaute Women Blue Outdoor Bag,146.13,http://assets.myntassets.com/v1/images/style/properties/ec98cf22cd608a2cfb38dfb0add76f7b_images.jpg,2,Blue
+1599,Geonaute Women Green Outdoor Bag,126.16,http://assets.myntassets.com/v1/images/style/properties/d3340c2d4cd9f64ec59083c4a6e41e07_images.jpg,2,Green
+1609,Reebok Women Boat-Neck Wildberry Sweatshirt,214.76,http://assets.myntassets.com/v1/images/style/properties/7b661983ddd630db69f2847a53e25704_images.jpg,7,Multicolor
+1651,Domyos Women Style Pink T-shirt,152.86,http://assets.myntassets.com/v1/images/style/properties/69b358afd5dac3c5f358ec068061e95a_images.jpg,10,Pink
+1730,Reebok Women Black Pink Frisker Shoe,132.51,http://assets.myntassets.com/v1/images/style/properties/ebd9429ab0f3566318f9ec9c70db00b8_images.jpg,15,Pink
+1731,Reebok Women White Blue Frisker Shoes,227.14,http://assets.myntassets.com/v1/images/style/properties/2cd58e7daf5c80c88561a44e3472a4b4_images.jpg,15,Blue
+1762,Lotto Women Cathy Blue T-shirt,182.35,http://assets.myntassets.com/v1/images/style/properties/f9bae9e7111015fd79e5c15c744028e0_images.jpg,10,Blue
+1765,Lotto Women White T-shirt,245.84,http://assets.myntassets.com/v1/images/style/properties/d00ee902253ad71d80b79a4f2f3b2284_images.jpg,10,White
+1809,Decathlon Profilter Women Blue T-shirt,226.57,http://assets.myntassets.com/v1/images/style/properties/c9a219ec7b782b2e0473f5f2509ea29c_images.jpg,10,Blue
+1923,Kalenji Women Running Shoe,154.39,http://assets.myntassets.com/v1/images/style/properties/ad15977e713592bafcd2de80b1f9299a_images.jpg,15,Multicolor
+1932,Quechua Women Arpenaz Flex Grey Shoe,246.06,http://assets.myntassets.com/v1/images/style/properties/0d0085ab1cbc85770706afde311a1a26_images.jpg,11,Grey
+1937,Kalenji Women Black Pink Shoe,139.58,http://assets.myntassets.com/v1/images/style/properties/c9597141c9ee4b764f4a3098db678aa8_images.jpg,15,Pink
+1939,Geonaute Women Large Outdoor Bag Bag,139.01,http://assets.myntassets.com/v1/images/style/properties/9d64d3fc7147ae2df0362f862c8912b9_images.jpg,2,Multicolor
+1941,Domyos Brown Bag,104,http://assets.myntassets.com/v1/images/style/properties/772aac9a26f048252f89693998ad05a2_images.jpg,2,Brown
+1951,Puma Women Eco Funky Shoes,165.34,http://assets.myntassets.com/v1/images/style/properties/491831d960ea885734ebdf6a4b4d12c5_images.jpg,15,Multicolor
+1978,Puma Women Yellow Sleeveless Top,223.66,http://assets.myntassets.com/v1/images/style/properties/bb5198a32ea5e03e33a081a733b77190_images.jpg,8,Yellow
+1984,ADIDAS Women Graphic White T-shirt,200.81,http://assets.myntassets.com/v1/images/style/properties/3d1c2533c78618aaf8c8229ade3f42fd_images.jpg,10,White
+1985,ADIDAS Womens Classic Red T-shirt,182.42,http://assets.myntassets.com/v1/images/style/properties/d6c9dfb6b231690ff5015d7a33fae9aa_images.jpg,10,Red
+1986,ADIDAS Womens Blue V Neck T-shirt,211.72,http://assets.myntassets.com/v1/images/style/properties/c4d0ec320d0d5ffb9b0a5430823a6cd2_images.jpg,10,Blue
+1988,ADIDAS Womens Red Tank T-shirt,234.03,http://assets.myntassets.com/v1/images/style/properties/4fe248d7289152c4dc029bbd8c6dc46e_images.jpg,10,Red
+1989,ADIDAS Womens Black Tank Fitted T-shirt,157.41,http://assets.myntassets.com/v1/images/style/properties/aec9ae3356b10f7afbcb77e9a7aab527_images.jpg,10,Black
+1990,ADIDAS Women's New Striped Tank T-shirt,190.04,http://assets.myntassets.com/v1/images/style/properties/d633ab77e8f1ad360a5c86950352dd88_images.jpg,10,Brown
+1991,ADIDAS Womens Blue  Polo T-shirt,176.09,http://assets.myntassets.com/v1/images/style/properties/493f6be4ed1b7e43036375bb8517aa5b_images.jpg,10,Blue
+1993,Puma Women Femme Fatale T-shirt,191.41,http://assets.myntassets.com/v1/images/style/properties/045fcd3738a0884b8d5d0a4bbc94c73f_images.jpg,10,Multicolor
+1994,Puma Women's Powergirls T-shirt,210.33,http://assets.myntassets.com/v1/images/style/properties/01da0e179d6f76d4efcb9bb0436c2de2_images.jpg,10,Multicolor
+2065,ADIDAS Women Polo Black Polo T-shirt,190.75,http://assets.myntassets.com/v1/images/style/properties/e6f9b6bfa350468f847fb16df19bfcd9_images.jpg,10,Black
+2069,ADIDAS Womens Tank White T-shirt,154.86,http://assets.myntassets.com/v1/images/style/properties/58ed2a5b00a6aa334f9de64e9675b6d6_images.jpg,10,White
+2078,ADIDAS Women Fitted Black T-shirt,178.52,http://assets.myntassets.com/v1/images/style/properties/a929e1e10469c87a8336418c18e9bef8_images.jpg,10,Black
+2120,Lee Women Navy Blue Top,199.44,http://assets.myntassets.com/v1/images/style/properties/459a46d31bcbb005e15f67d298097e2c_images.jpg,8,Blue
+2122,Lee Women Black Top,191.24,http://assets.myntassets.com/v1/images/style/properties/f44a6d4bb43c903b0a52b15e99aa5d14_images.jpg,8,Black
+2123,Lee Women Blue Top,221.96,http://assets.myntassets.com/v1/images/style/properties/78a99a479a7592a3f2cb8c56f4f63127_images.jpg,8,Blue
+2124,Lee Women Black T-shirt,193.51,http://assets.myntassets.com/v1/images/style/properties/44e4117789d567669a7a5ebd0319977e_images.jpg,10,Black
+2199,ADIDAS Women Streaks Blue Shoe,292.68,http://assets.myntassets.com/v1/images/style/properties/88046aefb3d87ea8418c12f6f48717fa_images.jpg,11,Blue
+2214,ADIDAS Women Black Socks,118.25,http://assets.myntassets.com/v1/images/style/properties/ed4d4217b5677da240d816885f125914_images.jpg,3,Black
+2216,ADIDAS Women Beige Socks,149.56,http://assets.myntassets.com/v1/images/style/properties/ba7cb4c0169a0589177030f098e69882_images.jpg,3,Beige
+2217,ADIDAS Women Pink Socks,140.87,http://assets.myntassets.com/v1/images/style/properties/54fd5ca8ebf86b59dd1a00631e85f53c_images.jpg,3,Pink
+2244,ADIDAS Women's Black T-shirt,185.11,http://assets.myntassets.com/v1/images/style/properties/683aba986f6883e3a5c64fb97c994342_images.jpg,10,Black
+2245,ADIDAS Women White Polo T-shirt,222.44,http://assets.myntassets.com/v1/images/style/properties/54c377631779f9f8397ec9bc503c6576_images.jpg,10,White
+2266,Nike Green Women T-shirt,173.13,http://assets.myntassets.com/v1/images/style/properties/903ce9f3a0e1de71e6998bc5e9c5db7a_images.jpg,10,Green
+2267,Nike Pink Women T-shirt,243.12,http://assets.myntassets.com/v1/images/style/properties/a0477242adbcaa92590a125f01c6943e_images.jpg,10,Pink
+2268,Nike Grey Women Sweatshirt,197.33,http://assets.myntassets.com/v1/images/style/properties/30b322db9ebe8cea9fe70e65b01aa3b2_images.jpg,7,Grey
+2269,Nike Light Green Women T-shirt,236.09,http://assets.myntassets.com/v1/images/style/properties/75f5dfc289bed2d64aba34ddd8f2cd36_images.jpg,10,Green
+2270,Nike JDI Pink Women T-shirt,187.95,http://assets.myntassets.com/v1/images/style/properties/3b1908156055b2653b5ea423883a0755_images.jpg,10,Pink
+2280,Nike Womens Sphere Pink T-shirt,179.95,http://assets.myntassets.com/v1/images/style/properties/3ad574a04640a053cd17b763addce5a6_images.jpg,10,Pink
+2288,Nike Women Black T-shirt,152.34,http://assets.myntassets.com/v1/images/style/properties/135f9aa8141d682fc218393049c70324_images.jpg,10,Black
+2289,Nike Women Blue T-shirt,150.7,http://assets.myntassets.com/v1/images/style/properties/f1d93934a4281038b615a263c70d00c2_images.jpg,10,Blue
+2290,Nike Women SS Pink T-shirt,179.07,http://assets.myntassets.com/v1/images/style/properties/249c29515f44c2178accc84831bfca8f_images.jpg,10,Pink
+2292,Nike Women Accuracy Black T-shirt,155.69,http://assets.myntassets.com/v1/images/style/properties/d6d96045737a828c91d1316d81ea61fd_images.jpg,10,Black
+2293,Nike Women Accuracy Pink T-shirt,177.54,http://assets.myntassets.com/v1/images/style/properties/2df9635a5efa7edb8da879b52f3b43f8_images.jpg,10,Pink
+2294,Nike Women's Miller Top,178.42,http://assets.myntassets.com/v1/images/style/properties/8dc7dbcf65e1676e4987dc2980ee7c4c_images.jpg,8,Multicolor
+2295,Nike Women Cruiser Pink T-shirt,216.27,http://assets.myntassets.com/v1/images/style/properties/5a26b549274c2fbd762161a2c7f4177f_images.jpg,10,Pink
+2297,Nike Women DPT Pink T-shirt,180.77,http://assets.myntassets.com/v1/images/style/properties/485992d1b8de4e30bf91c2adef70be7e_images.jpg,10,Pink
+2299,Nike Women Purple Polo T-shirt,164.64,http://assets.myntassets.com/v1/images/style/properties/6e723b8c24cefc4ebba042d53f55be29_images.jpg,10,Purple
+2300,Nike Women Pink Polo T-shirt,185.98,http://assets.myntassets.com/v1/images/style/properties/a69a,,Pink

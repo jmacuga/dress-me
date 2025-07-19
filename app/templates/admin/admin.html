@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.admin-statistics section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: solid 1px #212529;
+    border-radius: 15px;
+    margin: 15px 20px 15px 20px;
+    align-items: center;
+}
+
+.admin-statistics img {
+    max-width: 700px;
+    width: 100%;
+}
+
+.admin-statistics h2  {
+    display: flex;
+    width: 100%;
+}
+
+.dropdown {
+    margin: 15px 20px 0px 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    /* background-color: #212529; */
+    color: white;
+    background-color: #0d6efd;
+    padding: 10px;
+    min-width: 80px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: scroll;
+    height: 500px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0a58ca;
+}
+
+.admin-statistics-info {
+    display: flex;
+    width: 100%;
+}
+
+.admin-statistics-info h2{
+    display: flex;
+    width: 100%;
+    padding: 0%;
+    margin-bottom: 20px;
+    justify-content: center;
+    justify-items: center;
+    font-size: 35px;
+    font-weight: 1000;
+}
+
+.month-name {
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.compare-button{
+    font-size: 30px;
+    background-color: white;
+    border: none;
+}
+
+.month-statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+</style>
+
+<div class="admin-statistics">
+    <div class="dropdown">
+        <button class="dropbtn">Year</button>
+        <div class="dropdown-content">
+            {% for y in years %}
+            <a href="../{{ y }}">{{ y }}</a>
+
+            {% endfor %}
+        </div>
+    </div>
+    <div class="admin-statistics-info">
+        <h2>{{ year }}</h2>
+    </div>
+
+    <section>
+        <h2>Invoice statistics</h2>
+
+        <div id="invoices-slider" class="slider">
+            <div class="slides">
+                <button class="prev compare-button" onclick="prevSlide('invoices-slider')">&#10094;</button>
+                {% for month in months %}
+                <div class="month-statistics">
+                    <div class="month-name">{{month}}</div>
+                    <img src="{{ url_for('static', filename='figures/invoices/invoices_monthly_reports_hist_' ~ month ~ '.png') }}"/>
+                </div>
+                {% endfor %}
+                <button class="next compare-button" onclick="nextSlide('invoices-slider')">&#10095;</button>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='slider.js') }}"></script>  
+
+    </section>
+
+    <section>
+        <h2>Product statistics</h2>
+
+        <div id="products-slider" class="slider">
+            <div class="slides">
+                <button class="prev compare-button" onclick="prevSlide('products-slider')">&#10094;</button>
+                {% for month in months %}
+                <div class="month-statistics">
+                    <div class="month-name">{{month}}</div>
+                    <img src="{{ url_for('static', filename='figures/products/products_monthly_reports_hist_' ~ month ~ '.png') }}"/>
+                </div>
+                {% endfor %}
+                <button class="next compare-button" onclick="nextSlide('products-slider')">&#10095;</button>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='slider.js') }}"></script>  
+
+    </section>
+    <section>
+        <h2>City statistics</h2>
+
+        <div id="cities-slider" class="slider">
+            <div class="slides">
+                <button class="prev compare-button" onclick="prevSlide('cities-slider')">&#10096;</button>
+                {% for month in months %}
+                <div class="month-statistics">
+                    <div class="month-name">{{month}}</div>
+                    <img src="{{ url_for('static', filename='figures/cities/cities_monthly_reports_hist_' ~ month ~ '.png') }}"/>
+                </div>
+                {% endfor %}
+                <button class="next compare-button" onclick="nextSlide('cities-slider')">&#10097;</button>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='slider.js') }}"></script>  
+
+    </section>
+</div>
+
+{% endblock %}
